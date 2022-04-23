@@ -2,6 +2,7 @@ import datetime
 import msvcrt
 import os
 import os.path as op
+import re
 import shutil
 import sys
 import threading
@@ -41,9 +42,9 @@ def main():
 def initConfig():
     maxSaves = 100
     sleepTime = 300
-    gameFile = input('请拖入你常用的骑砍启动器文件并回车(一般是"mb_warband.exe"或者"WSELoader.exe"):\n')
-    savePath = input('请拖入你的存档文件夹并回车\n' + r'例如:C:\Users\Xmas\Documents\Mount&Blade Warband Savegames\Prophesy of Pendor V3.9.5' + '\n')
-    str = f'maxSaves:{maxSaves}\nsleepTime:{sleepTime}\ngamePath:{gameFile[1:-1]}\nsavePath:{savePath[1:-1]}\n{str0}'
+    gameFile = input('请拖入你常用的骑砍启动器文件并回车(一般是"mb_warband.exe"或者"WSELoader.exe"):\n').replace('"', '')
+    savePath = input('请拖入你的存档文件夹并回车\n' + r'例如:C:\Users\Xmas\Documents\Mount&Blade Warband Savegames\Prophesy of Pendor V3.9.5' + '\n').replace('"', '')
+    str = f'maxSaves:{maxSaves}\nsleepTime:{sleepTime}\ngamePath:{gameFile}\nsavePath:{savePath}\n{str0}'
     with open('bak.ini', 'w', encoding='utf-8') as f:
         f.write(str)
 
