@@ -5,7 +5,7 @@
 这是一个自动备份潘德存档的python脚本，只需一次设置，以后可以直接打开本脚本，脚本会自动启动骑砍，以及后台定时备份存档
 
 # 如何使用?
-如果电脑上有安装python，可下载bak.py或dist/bak.exe，双击运行；如果没有python环境，只可下载dist/bak.exe，双击运行
+如果电脑上有安装python，可下载SaveBak/bak.py或SaveBak/dist/bak.exe，双击运行；如果没有python环境，只可下载SaveBak/dist/bak.exe，双击运行
 
 # 注意事项?
 脚本会在同目录下生成bak.ini配置文件，请不要对此文件进行删除、重命名操作。脚本会在存档目录下生成bak文件夹，用来存放脚本替你备份的存档
